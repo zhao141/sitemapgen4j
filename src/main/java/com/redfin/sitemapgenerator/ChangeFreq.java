@@ -6,7 +6,7 @@ package com.redfin.sitemapgenerator;
  * to how often they crawl the page. The value {@link #ALWAYS} should be used to
  * describe documents that change each time they are accessed. The value
  * {@link #NEVER} should be used to describe archived URLs.
- * 
+ * <p>
  * <p>Please note that the
  * value of this tag is considered a <em>hint</em> and not a command. Even though
  * search engine crawlers may consider this information when making
@@ -16,14 +16,15 @@ package com.redfin.sitemapgenerator;
  * they can handle unexpected changes to those pages.</p>
  */
 public enum ChangeFreq {
-	ALWAYS, HOURLY, DAILY, WEEKLY, MONTHLY, YEARLY, NEVER;
-	String lowerCase;
-	private ChangeFreq() {
-		lowerCase = this.name().toLowerCase();
-	}
-	
-	@Override
-	public String toString() {
-		return lowerCase;
-	}
+    ALWAYS, HOURLY, DAILY, WEEKLY, MONTHLY, YEARLY, NEVER;
+    String lowerCase;
+
+    private ChangeFreq() {
+        lowerCase = this.name().toLowerCase();
+    }
+
+    @Override
+    public String toString() {
+        return lowerCase;
+    }
 }
